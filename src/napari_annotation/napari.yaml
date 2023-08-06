@@ -1,0 +1,48 @@
+name: napari-annotation
+display_name: Napari Annotation Buddy
+contributions:
+  commands:
+    - id: napari-annotation.get_reader
+      python_name: napari_annotation._reader:napari_get_reader
+      title: Open data with Napari Annotation Buddy
+    - id: napari-annotation.write_multiple
+      python_name: napari_annotation._writer:write_multiple
+      title: Save multi-layer data with Napari Annotation Buddy
+    - id: napari-annotation.write_single_image
+      python_name: napari_annotation._writer:write_single_image
+      title: Save image data with Napari Annotation Buddy
+    - id: napari-annotation.make_sample_data
+      python_name: napari_annotation._sample_data:make_sample_data
+      title: Load sample data from Napari Annotation Buddy
+    - id: napari-annotation.make_qwidget
+      python_name: napari_annotation._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: napari-annotation.make_magic_widget
+      python_name: napari_annotation._widget:example_magic_widget
+      title: Make example magic widget
+    - id: napari-annotation.make_func_widget
+      python_name: napari_annotation._widget:example_function_widget
+      title: Make example function widget
+  readers:
+    - command: napari-annotation.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  writers:
+    - command: napari-annotation.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-annotation.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  sample_data:
+    - command: napari-annotation.make_sample_data
+      display_name: Napari Annotation Buddy
+      key: unique_id.1
+  widgets:
+    - command: napari-annotation.make_qwidget
+      display_name: Example QWidget
+    - command: napari-annotation.make_magic_widget
+      display_name: Example Magic Widget
+    - command: napari-annotation.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget
