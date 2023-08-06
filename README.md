@@ -11,7 +11,7 @@ package description
 
 ----------------------------------
 
-This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
+
 
 <!--
 Don't miss the full getting started guide to set up your new package:
@@ -21,32 +21,43 @@ and review the napari docs for plugin developers:
 https://napari.org/stable/plugins/index.html
 -->
 
-## Installation
+<!--
+
 
 You can install `napari-annotation` via [pip]:
 
     pip install napari-annotation
+-->
 
 
+## Installation
 
-To install latest development version :
+This package is not yet available on PyPI. To install the latest development version :
 
     pip install git+https://github.com/zacswider/napari-annotation.git
 
+To develop locally, clone this repository and install the package in editable mode:
+
+    git clone https://github.com/zacswider/napari-annotation.git
+
+    cd napari-annotation
+
+    pip install -e ".[testing]"
 
 ## Contributing
 
-Contributions are very welcome. Tests can be run with [tox], please ensure
-the coverage at least stays the same before you submit a pull request.
-
-## License
-
-Distributed under the terms of the [BSD-3] license,
-"napari-annotation" is free and open source software
+Contributions are welcome. Tests can be run with [tox] (preferred) or at least with [pytest].
 
 ## Issues
 
 If you encounter any problems, please [file an issue] along with a detailed description.
+
+## License
+
+Distributed under the terms of the [BSD-3] license,
+"napari-annotation" is free and open source software.
+
+
 
 [napari]: https://github.com/napari/napari
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
@@ -63,5 +74,6 @@ If you encounter any problems, please [file an issue] along with a detailed desc
 
 [napari]: https://github.com/napari/napari
 [tox]: https://tox.readthedocs.io/en/latest/
+[pytest]: https://docs.pytest.org/en/latest/
 [pip]: https://pypi.org/project/pip/
 [PyPI]: https://pypi.org/
